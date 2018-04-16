@@ -14,4 +14,6 @@ class Artist
     @songs 
   end
   
+  def genres 
+    self.songs{|song| song.genre}
 end 
