@@ -1,19 +1,19 @@
-class Genre 
-  attr_accessor :name, :songs 
+class Patient
+  attr_accessor :name, :appointments 
   def initialize(name)
     @name = name 
-    @songs = []
+    @appointments = []
   end
   
-  def add_song(song)
-    @songs << song 
+  def add_appointment(appointment)
+    @appointments << appointment
   end
   
-  def songs 
-    @songs 
+  def appointments 
+    @appointments
   end
   
-  def artists 
-    self.songs.collect{|song| song.artist}
+  def doctors
+    self.appointments.collect{|appointment| appointment.doctor}
   end
 end
